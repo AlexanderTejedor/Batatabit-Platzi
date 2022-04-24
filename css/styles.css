@@ -1,0 +1,487 @@
+/*
+1. posicionamiento
+2. modelo de caja (Box model)
+3. Tipografía
+4. visuales
+5. other
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+
+    /*====== Colors =======*/
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue:#1A9AF7;
+    --soft-blue:#E7F5FF;
+    --warm-black:#201E1C;
+    --black:#282623;
+    --grey:#BABABA;
+    --off-white:#FAF8F7;
+    --just-white:#FFFFFF;
+
+}
+html{
+    font-family:'DM Sans', sans-serif;
+    font-size: 62.5%;
+    scroll-behavior:smooth;
+}
+body{
+    font-size: 1.6rem;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*====== header =======*/
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);;
+}
+header img{
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center;
+}
+.header--title-container{
+    width: 90%;
+    height: 218px;
+    min-width: 288px;
+    max-width: 900px;
+    margin-top: 40px;
+    text-align: center;
+    align-self: center;
+}
+.header--title-container h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+    margin-bottom: 24px;
+}
+.header--title-container p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+.header--title-container .header--button{
+    position: absolute;
+    left: calc(50% - 118px);
+    top: 270px;
+    display: block;
+    margin-top: 35px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color: var(--off-white);
+    /* sombra */
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border: none;
+    border-radius: 4px;
+    color: var(--warm-black);
+}
+.header--button span{
+    display: inline-block;
+    width: 20px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url("../assets/icons/down-arrow.svg");
+    background-position: center;
+}
+/*====== main =======*/
+
+main{
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+/*====== main-exchange-container =======*/
+.main-exchange-container{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.main-exchange-container .backgroundImg{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url('../assets/imgs/bitcoin.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-exchange-container--title{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.main-exchange-container h2{
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+.main-exchange-container p{
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575;
+}
+
+/*====== main-table-container Money =======*/
+.main-tables-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.table-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.table-content h3{
+    position: relative;
+    right: 80px;
+    margin: 20px 0 12px 70px;
+    font-size: 1.8rem;
+    color: var(--bitcoin-orange);
+}
+.main-tables-container .table-content{
+    position: relative;
+}
+.main-tables-container .table-content .table-items{
+    display: grid;
+    grid-template-columns: 101px 101px;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 16px;
+    font-family: "Inter", sans-serif;
+}
+ .table-content .table-title{
+    text-align: left;
+}
+.table-content img{
+    margin-left: 10px;
+    width: 11px;
+}
+.table-items .table-title,
+.table-items .table-dollar{
+    background: var(--just-white);
+    border:1px solid var(--off-white);
+    padding: 10px 12px;
+    color: #757575;
+}
+.table-items .table-title:nth-child(1){
+    border-radius: 8px 0 0 0;
+}
+.table-items .table-dollar:nth-child(2){
+    border-radius: 0 8px 0 0;
+}
+.table-items .table-title:nth-child(7){
+    border-radius: 0 0 0 8px;
+}
+.table-items .table-dollar:nth-child(8){
+    border-radius: 0 0 8px 0;
+}
+.table-content .arrow-two{
+    position: absolute;
+    width: 25px;
+    right: -40px;
+    top: 128px;
+}
+.table-content .table-date{
+    width: 100%;
+}
+.table-date .table-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 177px;
+    height: 31px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+
+}
+.table-date .table-info span{
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+/*====== main-table-container Comisiones =======*/
+.table-content .comisiones{
+    color: var(--secondary-blue);
+    right: 70px;
+}
+.table-content .table-info--color{
+    background-color: var(--soft-blue);
+}
+
+/* ======== main-product-detail ======== */
+.main-product-detail{
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--warm-black);
+}
+.product-detail__batata-logo{
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    background-image: url('../assets/icons/potato.svg');
+    top: -10px;
+    left: calc(50% - 20px);
+}
+.product-detail__title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.product-detail__title h2{
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+}
+.product-detail__title p{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+.product-detail__title h2,
+.product-cards__container .product-card__title{
+    color: var(--just-white);
+} 
+.product-detail__title p,
+.product-card__body{ 
+    color: #808080;
+}
+
+/* ======== product-cards__container ======== */
+.product-detail__card{
+    min-width: 288px;
+    max-width: 320px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--black);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+.product-detail__card .clock{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url(../assets/icons/clock.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.product-card__title{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+}
+.product-card__body{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+.product-detail__card .eye{
+    background-image: url('../assets/icons/eye.svg');
+}
+.product-detail__card .dollar-sign{
+    background-image: url('../assets/icons/dollar-sign.svg');
+}
+.product-detail__card .check{
+    background-image: url('../assets/icons/check-circle.svg');
+}
+
+/* ======bitcoin-img-containe ======== */
+.bitcoin-img-container{
+    width: 100%;
+    min-width: 320px;
+    height: 50vh;
+    background-image: url(../assets/imgs/bitcoinbaby2x.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.bitcoin-img-container h2{
+    padding-top: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+/* main-plans-container */
+.main-plans-container{
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+.plans-title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.plans-title h2{
+    padding-top: 50px;
+    font-style: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+.plans-title p{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+/* plans-container__card */
+.plans-container__slider{
+    display: flex;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+.plans-container__card{
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 30px 4px 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+.plans-container__card .recommended{
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    padding: 6px;
+    left: calc(50% - 60px);
+    top: -15px;
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+    color: var(--just-white);
+    font-size: 1.2rem;
+}
+.plan-card__title{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--black);
+}
+.plan-card__price{
+    position: relative;
+    padding: 5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5.3rem;
+    color: var(--black);
+}
+.plan-card__price span{
+    position: absolute;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 300;
+    top: 0;
+    left: calc(50% - 45px);
+}
+.plan-card__saving{
+    font-size: 1.2rem;
+    color: #757575;
+}
+.plan-card__ca{
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    background-color: #faf8f7;
+    border: 2px solid var(--bitcoin-orange);
+    cursor: pointer;
+    border-radius: 4px;
+    font-family:'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+    background-color:#FAF8F7;
+}
+.plan-card__ca span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/arrow-right.svg');
+    vertical-align: text-bottom;
+}
+
+/* ======== footer ======== */
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+footer section{
+    display: flex;
+    width: 50%;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+footer .left ul{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+footer .left li{
+    margin: 10px 0;
+}
+footer a{
+    color: var(--just-white);
+}
